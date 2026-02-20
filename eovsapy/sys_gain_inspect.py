@@ -673,7 +673,6 @@ def _save_scan_figures(idb_path, date_tag, outdir, fidxs, tidxs, ant_count=15, y
     )
     t_path = os.path.join(save_dir, "sys_gain_t_{}.jpg".format(scan_tag))
     fig_t.savefig(t_path, dpi=110, bbox_inches="tight")
-    fig_t.clf()
 
     fig_f = Figure(figsize=(12, 8))
     axes_f = _make_axes_grid(fig_f, 3, 5, sharex=True, sharey=True)
@@ -691,7 +690,6 @@ def _save_scan_figures(idb_path, date_tag, outdir, fidxs, tidxs, ant_count=15, y
     )
     f_path = os.path.join(save_dir, "sys_gain_f_{}.jpg".format(scan_tag))
     fig_f.savefig(f_path, dpi=110, bbox_inches="tight")
-    fig_f.clf()
 
     written = [t_path, f_path]
 
